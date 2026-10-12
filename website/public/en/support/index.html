@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help – OpenBlitzer</title>
+<meta name="description" content="Help for OpenBlitzer: how warnings work, background use, battery, driving direction, reporting and confirming, running your own server and contact.">
+<link rel="canonical" href="https://openblitzer.codext.de/en/support/">
+<link rel="alternate" hreflang="de" href="https://openblitzer.codext.de/support/">
+<link rel="alternate" hreflang="en" href="https://openblitzer.codext.de/en/support/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="/en/"><img src="/assets/favicon.svg" alt="" width="30" height="30">OpenBlitzer</a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="/en/support/" aria-current="page">Help</a><a href="/en/privacy/">Privacy</a><a class="lang" href="/support/" hreflang="de" lang="de">DE</a></nav>
+  </header>
+  <main class="doc">
+    <h1>Help</h1>
+    <p class="meta">Answers to the most common questions. Not listed? Email us at <a href="mailto:daniel.ehrhardt@codext.de">daniel.ehrhardt@codext.de</a>.</p>
+
+    <div class="notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.2h.01"/></svg>
+      <div>
+        <h2>For passengers and trip planning</h2>
+        <p>In Germany, drivers must not use a speed camera warner while driving (§ 23 (1c) StVO). OpenBlitzer is meant for passengers and for planning. The app is not available in Switzerland.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>How do warnings work?</summary>
+        <div>
+          <p>The app continuously compares your GPS position, speed and heading with the fixed cameras stored on the device and the current community reports. All of this happens on your phone.</p>
+          <ul>
+            <li>How far it looks ahead depends on your speed: 300 m below 60 km/h, 500 m below 90 km/h, 800 m below 130 km/h, 1,200 m above that.</li>
+            <li>When a camera or report lies ahead, a banner shows the type, distance and speed limit, with a chime, a spoken announcement and vibration.</li>
+            <li>A second alert follows shortly before the camera: 150 m before it in town, 300 m before it on fast roads.</li>
+            <li>If you drive faster than the limit plus your tolerance (3 km/h by default), the app beeps until you slow down.</li>
+          </ul>
+          <p>Use the demo drive in the app to see and hear it without driving.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why does the driving direction matter?</summary>
+        <div>
+          <p>Many cameras only measure one direction, and many roads run close to each other. Without direction, the app would warn about cameras on the opposite carriageway, on a parallel road or behind you. So OpenBlitzer only warns when a camera lies roughly ahead in your direction of travel (within 35 degrees) and, where known, measures your direction.</p>
+          <p>The app derives your heading from GPS from about 10 km/h. When standing still or at walking pace the heading is imprecise.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does the app warn in the background?</summary>
+        <div>
+          <p>Yes. With the screen off or with a navigation app in front, OpenBlitzer keeps warning with sound, voice and vibration. Music or navigation prompts get quieter for a moment.</p>
+          <ul>
+            <li><strong>iPhone:</strong> The “While Using the App” permission is enough. While the app warns in the background, iOS shows the location indicator in the status bar.</li>
+            <li><strong>Android:</strong> The app runs as a foreground service and shows a persistent notification. Some manufacturers stop background apps to save power; if that happens, exclude OpenBlitzer from battery optimisation.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>How much battery does OpenBlitzer use?</summary>
+        <div>
+          <p>GPS and a bright screen use the most power. In the background or with the screen off, consumption is much lower. On longer trips we recommend a charging cable. Fixed cameras are stored on the device, so on the road the app only uses a little mobile data for live reports.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I report a camera, a traffic jam or a hazard?</summary>
+        <div>
+          <p>Tap the report button on the map and choose the type: mobile camera, traffic jam end, accident, roadworks, hazard, road closure, poor visibility or new fixed camera. It never takes more than two taps. The app uses your position and heading at the moment you tap.</p>
+          <p>If the same kind of report already exists within 200 m for your direction, yours counts as a confirmation. To prevent abuse, each device can submit up to 12 reports per hour.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I confirm or remove a report?</summary>
+        <div>
+          <p>After you pass a report, the app asks “Still there?”. Tap Yes if it is still there or No if nothing was there. The question disappears by itself after 12 seconds. The app does not ask about your own reports.</p>
+          <ul>
+            <li>Yes extends the report by its full lifetime, for example 2.5 hours for a mobile camera.</li>
+            <li>Once a report has two more No votes than Yes votes, it is removed. The person who reported it counts as one Yes.</li>
+            <li>Each device has one vote per report; if you vote again, the latest vote counts.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>A fixed camera is missing or wrong. What can I do?</summary>
+        <div>
+          <p>If a camera is missing, report it in the app as a “new fixed camera”. Once three different devices confirm it, it becomes part of the fixed data. Even better for everyone: add or fix it in <a href="https://www.openstreetmap.org/">OpenStreetMap</a>. Our server picks up changes from OpenStreetMap once a week.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does the app work offline?</summary>
+        <div><p>Yes, for fixed cameras. They are stored on the device and warn without signal. Live reports need a connection; reports that were loaded stay cached for their lifetime. The map itself also needs a connection for new areas.</p></div>
+      </details>
+
+      <details>
+        <summary>How do I run my own server?</summary>
+        <div>
+          <p>The server lives in the same repository as the app, in <code>server/</code>. It runs on Bun with a single SQLite file and is built as a Docker image. A compose file is in <code>deploy/</code>.</p>
+          <ul>
+            <li>On first start the server imports the fixed cameras from OpenStreetMap through the Overpass API, then again every week. If an import fails, the previous data is kept.</li>
+            <li>A secret salt makes sure install IDs are only stored as hashes; an admin token lets you delete reports.</li>
+            <li>The API is described in <code>docs/API.md</code>.</li>
+          </ul>
+          <p>The step-by-step guide, including how to connect the app to your server, is in the <a href="https://github.com/codextde/openblitzer#readme">README on GitHub</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What does OpenBlitzer cost, and how is it funded?</summary>
+        <div><p>The app is free, with no ads, no subscription and no in-app purchases. Codext GmbH runs the server. The source code is MIT licensed on <a href="https://github.com/codextde/openblitzer">GitHub</a>.</p></div>
+      </details>
+
+      <details>
+        <summary>Why is OpenBlitzer not available in Switzerland?</summary>
+        <div><p>Switzerland prohibits warnings about traffic checks by law, for passengers too. That is why the app is not available in the stores there.</p></div>
+      </details>
+    </div>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Questions, feedback or found a bug? Email us at <a href="mailto:daniel.ehrhardt@codext.de">daniel.ehrhardt@codext.de</a>. You can also report bugs and ideas as an issue on <a href="https://github.com/codextde/openblitzer/issues">GitHub</a>.</p>
+      <p>Wrong or abusive reports in the app? Vote No or email us and we will remove them.</p>
+    </div>
+  </main>
+  <footer>
+    <span>© 2026 Codext GmbH</span>
+    <nav aria-label="Footer"><a href="/en/">Home</a><a href="/en/privacy/">Privacy</a><a href="/en/imprint/">Imprint</a><a href="https://github.com/codextde/openblitzer">GitHub</a><a href="/support/" hreflang="de" lang="de">Deutsch</a></nav>
+    <span class="osm">Camera data: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL).</span>
+  </footer>
+</div>
+</body>
+</html>

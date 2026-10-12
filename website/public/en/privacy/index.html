@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy – OpenBlitzer</title>
+<meta name="description" content="Privacy policy for the OpenBlitzer app and openblitzer.codext.de. No account, no ads, no tracking. What reaches our server when you report and how long it is kept.">
+<link rel="canonical" href="https://openblitzer.codext.de/en/privacy/">
+<link rel="alternate" hreflang="de" href="https://openblitzer.codext.de/datenschutz/">
+<link rel="alternate" hreflang="en" href="https://openblitzer.codext.de/en/privacy/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="/en/"><img src="/assets/favicon.svg" alt="" width="30" height="30">OpenBlitzer</a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="/en/support/">Help</a><a href="/en/privacy/" aria-current="page">Privacy</a><a href="/en/imprint/">Imprint</a><a class="lang" href="/datenschutz/" hreflang="de" lang="de">DE</a></nav>
+  </header>
+  <main class="doc">
+    <h1>Privacy policy</h1>
+    <p class="meta">For the “OpenBlitzer” app (iOS and Android), the API at api.openblitzer.codext.de and the website openblitzer.codext.de. Last updated: 12 October 2026. The <a href="/datenschutz/" hreflang="de" lang="de">German version</a> is legally binding.</p>
+
+    <h2>In short</h2>
+    <p>OpenBlitzer needs no account, shows no ads and contains no analytics, tracking or advertising SDKs. The app computes warnings on your device, and your location stays there. Only two things reach our server in Germany: your approximate position when the app loads live reports (not stored), and your reports and votes together with a random install ID that is only stored as a hash. We delete reports no later than 30 days after they expire.</p>
+
+    <h2>Controller</h2>
+    <p>Codext GmbH<br>Frankenstraße 10<br>74549 Wolpertshausen<br>Germany<br>Email: <a href="mailto:daniel.ehrhardt@codext.de">daniel.ehrhardt@codext.de</a><br>Phone: +49 7904 5203106<br>Represented by its managing director Daniel Ehrhardt</p>
+
+    <h2>What data the app processes</h2>
+
+    <h3>Location on your device</h3>
+    <p>With your permission, the app uses your device location to show your position on the map, determine speed and heading, and check whether a camera or report lies ahead. So that warnings also work with the screen off or with another app in front, this continues in the background while you use the app. The operating system shows this: on iPhone with the location indicator in the status bar, on Android with a persistent notification. The warning logic runs entirely on your device. Your trip is not recorded, and your location only leaves the device in the cases described below. You can revoke the permission at any time in the system settings.</p>
+
+    <h3>Loading live reports</h3>
+    <p>To load reports from other users around you, the app sends your approximate current position and a search radius to our server (api.openblitzer.codext.de). The server only uses the position to return the matching reports and does not store it. The legal basis is Art. 6(1)(b) GDPR (providing the feature you use).</p>
+
+    <h3>Reporting and voting</h3>
+    <p>When you report something, such as a mobile speed camera or the end of a traffic jam, the app sends to our server:</p>
+    <ul>
+      <li>the type of report and the position where you submit it;</li>
+      <li>optionally your heading, your speed and a speed limit if you enter one;</li>
+      <li>your install ID (see below).</li>
+    </ul>
+    <p>When you confirm or deny a report (“Still there?”), the app sends the report’s identifier, your vote (yes or no) and your install ID.</p>
+    <p><strong>Install ID:</strong> On first launch the app generates a random 128-bit number and stores it on your device. It is not linked to your name, phone number, device or any account. Our server never stores it in plain text, only as a SHA-256 hash with a secret server salt. We need it so that each device has one vote per report, duplicate reports are merged and abuse can be limited (for example at most 12 reports per hour and device). Deleting the app deletes the ID; a reinstall creates a new one.</p>
+    <p><strong>Visibility:</strong> Reports are visible to all app users and through the open API, with type, position, heading, speed limit, timestamps and the number of yes and no votes. The install ID and its hash are never published.</p>
+    <p><strong>Retention:</strong> Every report has a lifetime that restarts with each confirmation (for example 2.5 hours for a mobile camera, 72 hours for roadworks, 30 days for a new fixed camera). We keep reports and their votes until they expire and then for at most 30 more days to detect abuse; after that they are deleted. Exception: once three different devices confirm a new fixed camera, its position, type and speed limit become a permanent part of the public camera data, without the install ID or any other link to the reporting devices.</p>
+    <p>The legal basis is Art. 6(1)(b) GDPR (providing the reporting feature) and Art. 6(1)(f) GDPR (our legitimate interest in reliable reports and in preventing abuse).</p>
+
+    <h3>Fixed camera data</h3>
+    <p>The app downloads the fixed cameras from our server and stores them on your device so that warnings work offline. This request contains no position. The data comes from OpenStreetMap (© OpenStreetMap contributors, ODbL).</p>
+
+    <h3>Server and IP addresses</h3>
+    <p>Our server is hosted by Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, in data centres in Germany. Hetzner processes data on our behalf under Art. 28 GDPR. Every connection technically transmits your device’s IP address. We only keep it briefly in memory to rate limit requests (for example at most 40 reports per hour and IP address) and do not store it in the database. The legal basis is Art. 6(1)(f) GDPR (protecting the service against abuse).</p>
+
+    <h3>Map tiles from OpenFreeMap</h3>
+    <p>The map in the app is made of tiles that your device loads directly from OpenFreeMap (tiles.openfreemap.org), operated by Hyperknot Software Kft., Hungary. This technically transmits your IP address and the requested tiles, from which the visible map area can be derived. According to OpenFreeMap, IP addresses are not stored in access logs, no cookies are used and logs are deleted after 7 days; Cloudflare may be used as a content delivery network. Details are in the <a href="https://openfreemap.org/privacy/">OpenFreeMap privacy policy</a>. The legal basis is Art. 6(1)(b) GDPR (displaying the map). Map data comes from OpenStreetMap (© OpenStreetMap contributors).</p>
+
+    <h3>Sounds, voice and notifications</h3>
+    <p>The app plays chimes itself. Spoken announcements are produced by your operating system’s text-to-speech; no data is sent to us for this. While warnings run in the background, Android shows a persistent notification. The app does not use a push service.</p>
+
+    <h3>Settings</h3>
+    <p>Your settings, such as language, units and the overspeed tolerance, are stored on your device only.</p>
+
+    <h3>App stores</h3>
+    <p>The app is distributed through the Apple App Store and Google Play. Apple and Google process data under their own privacy policies when you download or update it. From the stores we only receive aggregated, non-personal statistics (such as the number of installs) and, if you agree to share them, anonymous crash reports.</p>
+
+    <h3>Contact by email</h3>
+    <p>If you email us, we process your email address and message to reply (Art. 6(1)(b) and (f) GDPR). We delete the data once it is no longer needed, at the latest after statutory retention periods.</p>
+
+    <h2>Website openblitzer.codext.de</h2>
+    <p>The website is delivered through Cloudflare (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). When you visit it, Cloudflare processes technically necessary data such as your IP address, the time and the requested page to deliver the site securely (Art. 6(1)(f) GDPR). Cloudflare is certified under the EU-US Data Privacy Framework. The website uses no cookies, no analytics and no embedded third-party content; the font is served from our own server.</p>
+
+    <h2>No sharing, no selling</h2>
+    <p>We do not sell data and do not share personal data with third parties. Apart from Hetzner as our hosting provider, nobody has access to our server.</p>
+
+    <h2>Your rights</h2>
+    <p>You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object (Art. 21). Contact <a href="mailto:daniel.ehrhardt@codext.de">daniel.ehrhardt@codext.de</a>. Because we store no names, no accounts and no plain-text install IDs, we usually cannot link stored reports to a person (Art. 11 GDPR). You also have the right to lodge a complaint with a data protection authority, for example the State Commissioner for Data Protection and Freedom of Information Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart, Germany.</p>
+
+    <h2>Changes</h2>
+    <p>We update this policy when the app or the law changes. The version published here applies.</p>
+  </main>
+  <footer>
+    <span>© 2026 Codext GmbH</span>
+    <nav aria-label="Footer"><a href="/en/">Home</a><a href="/en/support/">Help</a><a href="/en/imprint/">Imprint</a><a href="https://github.com/codextde/openblitzer">GitHub</a><a href="/datenschutz/" hreflang="de" lang="de">Deutsch</a></nav>
+  </footer>
+</div>
+</body>
+</html>

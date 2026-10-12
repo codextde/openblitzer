@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenBlitzer – Ad-free, open-source speed camera warner</title>
+<meta name="description" content="OpenBlitzer warns you about fixed speed cameras, mobile checks, traffic jams and hazards. Free, no ads, no account, no tracking. Open source for iPhone and Android.">
+<link rel="canonical" href="https://openblitzer.codext.de/en/">
+<link rel="alternate" hreflang="de" href="https://openblitzer.codext.de/">
+<link rel="alternate" hreflang="en" href="https://openblitzer.codext.de/en/">
+<link rel="alternate" hreflang="x-default" href="https://openblitzer.codext.de/">
+<meta name="theme-color" content="#F5F6F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0D10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="OpenBlitzer – Speed camera warner without ads">
+<meta property="og:description" content="Fixed cameras, live community reports and warnings only in your driving direction. Free, open source, no tracking.">
+<meta property="og:url" content="https://openblitzer.codext.de/en/">
+<meta property="og:image" content="https://openblitzer.codext.de/assets/icon-512.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="/en/"><img src="/assets/favicon.svg" alt="" width="30" height="30">OpenBlitzer</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="opt" href="#features">Features</a>
+      <a class="opt" href="#privacy">Privacy</a>
+      <a class="opt" href="#open-source">Open source</a>
+      <a href="/en/support/">Help</a>
+      <a class="lang" href="/" hreflang="de" lang="de">DE</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <span class="eyebrow">Open source · iPhone and Android</span>
+        <h1 id="hero-title">Speed camera warner without ads.<span class="sub">No account. No tracking.</span></h1>
+        <p class="lead">OpenBlitzer shows fixed speed cameras, red light cameras and section control, and warns you about mobile checks, traffic jams and hazards reported by other drivers. Free and open source, made by Codext GmbH.</p>
+        <div class="actions">
+          <a class="btn" href="/ios"><span><small>Download on the</small>App Store</span></a>
+          <a class="btn" href="/android"><span><small>Get it on</small>Google Play</span></a>
+          <a class="btn ghost" href="https://github.com/codextde/openblitzer">Source on GitHub</a>
+        </div>
+        <ul class="facts">
+          <li>No ads</li>
+          <li>No account</li>
+          <li>No tracking</li>
+          <li>MIT license</li>
+        </ul>
+      </div>
+      <div class="device">
+        <div class="phone back" aria-hidden="true">
+          <div class="screen">
+            <img class="shot" src="/assets/screens/en-2.png" alt="" onerror="this.remove()">
+            <span class="island"></span>
+          </div>
+        </div>
+        <div class="phone front">
+          <div class="screen">
+            <img class="shot" src="/assets/screens/en-1.png" alt="OpenBlitzer app showing the map and a speed camera warning" onerror="this.remove()">
+            <span class="island"></span>
+            <div class="ph" aria-hidden="true"><img src="/assets/favicon.svg" alt="" width="76" height="76">OpenBlitzer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tight" aria-labelledby="legal-title">
+      <div class="notice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.2h.01"/></svg>
+        <div>
+          <h2 id="legal-title">For passengers and trip planning</h2>
+          <p>In Germany, drivers must not use a speed camera warner while driving (§ 23 (1c) StVO). Other countries have similar rules. OpenBlitzer is meant for passengers and for planning a route.</p>
+          <p>The app is not available in Switzerland.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="section-head">
+        <div class="kicker">How it warns</div>
+        <h2 id="how-title">In time, only in your direction, without false alarms.</h2>
+        <p>The warning logic runs entirely on your phone. It knows your speed and heading and only speaks up when something is really ahead of you.</p>
+      </div>
+      <div class="flow">
+        <ol class="steps">
+          <li>
+            <h3>Look ahead</h3>
+            <p>The faster you go, the further it looks: 300 m in town, up to 1,200 m on the motorway. Cameras that only measure the opposite direction are ignored.</p>
+          </li>
+          <li>
+            <h3>Warn</h3>
+            <p>A large banner with type, distance and speed limit, plus a chime, a spoken announcement and vibration. A second alert follows shortly before the camera.</p>
+          </li>
+          <li>
+            <h3>Confirm</h3>
+            <p>After you pass a community report, the app asks: still there? Yes extends the report, No helps remove it. The question disappears by itself after 12 seconds.</p>
+          </li>
+        </ol>
+        <div class="alert-demo" role="img" aria-label="Example warning: fixed speed camera in 350 metres, speed limit 80, your speed 76 km/h">
+          <div class="banner" aria-hidden="true">
+            <span class="sign">80</span>
+            <div><b>Fixed camera</b><span>In your direction</span></div>
+            <div class="dist">350 m<small>to the camera</small></div>
+            <div class="bar"><i></i></div>
+          </div>
+          <div class="speedo" aria-hidden="true">
+            <div class="ok"><b>76</b><span>km/h, your speed</span></div>
+            <div><b>80</b><span>km/h allowed</span></div>
+          </div>
+          <div class="ask" aria-hidden="true">
+            <span>Mobile camera still there?</span>
+            <div><em class="yes">Yes</em><em class="no">No</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="divider" aria-labelledby="feat-title">
+      <div class="section-head">
+        <div class="kicker">Features</div>
+        <h2 id="feat-title">Everything a speed camera warner needs.</h2>
+        <p>No premium tier and no ad banners. Every feature is for everyone.</p>
+      </div>
+      <div class="grid3">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 10.5l5-3v9l-5-3"/></svg></div>
+          <h3>Fixed cameras on the map</h3>
+          <p>Fixed speed cameras, red light cameras and section control from OpenStreetMap, across Europe.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.2h.01"/></svg></div>
+          <h3>Live reports</h3>
+          <p>Mobile cameras, traffic jam ends, accidents, roadworks, hazards, closures, poor visibility and new fixed cameras. Report with two taps at most.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.6"/></svg></div>
+          <h3>Confirm or remove</h3>
+          <p>After you pass a report, the app asks whether it is still there. That keeps reports current and lets old ones disappear.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 18-7-4-7 4z"/></svg></div>
+          <h3>Direction-aware</h3>
+          <p>Warnings only for what is ahead of you and applies to your direction. No alarms for the opposite carriageway or a parallel road.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5l5 4v-13l-5 4z"/><path d="M16 9a4.5 4.5 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg></div>
+          <h3>Banner, chime and voice</h3>
+          <p>Full-width banner with a distance countdown, chime, spoken announcement in English or German, and vibration.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg></div>
+          <h3>Speedometer and overspeed alarm</h3>
+          <p>GPS speed, the speed limit of the next camera and an alarm when you are too fast. You set the tolerance.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="12" height="12" rx="2.5"/><path d="M8 20h9.5a2.5 2.5 0 0 0 2.5-2.5V8"/></svg></div>
+          <h3>In the background</h3>
+          <p>Keeps warning with the screen off or with your navigation app in front. Music and navigation get quieter for the announcement.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg></div>
+          <h3>Offline</h3>
+          <p>All fixed cameras are stored on the device and warn without signal. Live reports need a connection and are cached for their lifetime.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6h17l-2.5 12H6z"/><path d="M9 12h6"/></svg></div>
+          <h3>HUD mode</h3>
+          <p>A mirrored, high-contrast view of your speed and the next warning that reflects in the windshield.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></svg></div>
+          <h3>Demo drive</h3>
+          <p>A simulated drive past cameras shows how warnings look and sound without leaving your desk.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></div>
+          <h3>Light and dark</h3>
+          <p>A light map for the day and a dark map for the night.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3z"/></svg></div>
+          <h3>English and German, km/h and mph</h3>
+          <p>App and voice in English or German, speeds in km/h or mph.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="reports" class="divider" aria-labelledby="types-title">
+      <div class="section-head">
+        <div class="kicker">Reports</div>
+        <h2 id="types-title">What the community reports, and for how long.</h2>
+        <p>Every confirmation extends a report by its full lifetime. Once a report has two more No votes than Yes votes, it disappears right away.</p>
+      </div>
+      <ul class="types">
+        <li><b>Mobile speed camera</b><span>2.5 hours</span></li>
+        <li><b>Traffic jam end</b><span>45 minutes</span></li>
+        <li><b>Accident</b><span>90 minutes</span></li>
+        <li><b>Hazard on the road</b><span>60 minutes</span></li>
+        <li><b>Poor visibility</b><span>2 hours</span></li>
+        <li><b>Road closure</b><span>12 hours</span></li>
+        <li><b>Roadworks</b><span>72 hours</span></li>
+        <li><b>New fixed camera</b><span>30 days</span></li>
+      </ul>
+      <p class="fine">A new fixed camera becomes part of the fixed camera data once three different devices have confirmed it.</p>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="band">
+        <div>
+          <h2 id="privacy-title">No account. No ads. No tracking.</h2>
+          <p>A speed camera warner knows where you drive. That is why your location stays on your phone. Our server only receives what reports need, and nothing that identifies you.</p>
+          <p><a href="/en/privacy/">Read the privacy policy</a></p>
+        </div>
+        <ul>
+          <li><b>No analytics or ad SDKs</b><span>Nothing in the app analyses your behaviour.</span></li>
+          <li><b>Warnings are computed on the device</b><span>Your trip is not recorded. To load live reports the app sends your approximate position, which is not stored.</span></li>
+          <li><b>Anonymous reports</b><span>Instead of an account, a random install ID that the server only stores as a hash.</span></li>
+          <li><b>Server in Germany</b><span>Reports are stored at Hetzner in Germany and deleted at most 30 days after they expire.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="open-source" aria-labelledby="oss-title">
+      <div class="section-head">
+        <div class="kicker">Open source</div>
+        <h2 id="oss-title">Open code, open data.</h2>
+        <p>App, server and website are MIT licensed on GitHub. Check what the app sends, report bugs, contribute or run everything yourself.</p>
+      </div>
+      <div class="split">
+        <div class="panel">
+          <h3>Source code on GitHub</h3>
+          <p>One repository for everything: the Expo app for iPhone and Android, the server and this website.</p>
+          <ul>
+            <li>MIT license, free to use and modify</li>
+            <li>Warning engine as a tested TypeScript module</li>
+            <li>Bugs and ideas as issues</li>
+          </ul>
+          <div class="actions"><a class="btn" href="https://github.com/codextde/openblitzer">github.com/codextde/openblitzer</a></div>
+        </div>
+        <div class="panel">
+          <h3>Run your own server</h3>
+          <p>The server is small: Bun, one SQLite file and a Docker image. It imports the cameras from OpenStreetMap every week and stores the community reports.</p>
+          <ul>
+            <li>Docker image and compose file in the repository</li>
+            <li>Open API, documented in <code>docs/API.md</code></li>
+            <li>Camera import through the OpenStreetMap Overpass API</li>
+          </ul>
+          <div class="actions"><a class="btn ghost" href="https://github.com/codextde/openblitzer#readme">Guide in the README</a></div>
+        </div>
+      </div>
+      <p class="attrib"><strong>Camera data: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL).</strong> Missing a fixed camera? Report it in the app or add it to OpenStreetMap directly. Every map built on OpenStreetMap benefits.</p>
+    </section>
+
+    <section id="faq" class="divider" aria-labelledby="faq-title">
+      <div class="section-head">
+        <div class="kicker">Questions</div>
+        <h2 id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>May I use the app while driving?</summary>
+          <div><p>Not as the driver in Germany: § 23 (1c) StVO forbids operating or carrying a ready-to-use device that shows or warns about traffic enforcement while driving. This includes apps. Passengers may use OpenBlitzer, and you can plan your route with it before you leave. Other countries have their own, sometimes stricter rules.</p></div>
+        </details>
+        <details>
+          <summary>What does OpenBlitzer cost?</summary>
+          <div><p>Nothing. No ads, no subscription, no in-app purchases. The source code is MIT licensed on GitHub.</p></div>
+        </details>
+        <details>
+          <summary>Where does the camera data come from?</summary>
+          <div><p>Fixed cameras come from OpenStreetMap (© OpenStreetMap contributors, ODbL) and are updated weekly. Mobile cameras and hazards are reported by people using the app.</p></div>
+        </details>
+        <details>
+          <summary>Why is the app not available in Switzerland?</summary>
+          <div><p>Switzerland prohibits warnings about traffic checks, for passengers too. So we do not offer OpenBlitzer there.</p></div>
+        </details>
+        <details>
+          <summary>Is there CarPlay or Android Auto?</summary>
+          <div><p>Not yet. CarPlay needs a special entitlement from Apple. Both are on the roadmap in the README.</p></div>
+        </details>
+      </div>
+      <p class="more"><a href="/en/support/">All questions and help</a></p>
+    </section>
+
+    <section class="cta divider" aria-labelledby="cta-title">
+      <img src="/assets/favicon.svg" alt="" width="72" height="72">
+      <h2 id="cta-title">Warnings without ads and without data collection.</h2>
+      <p>Free for iPhone and Android. Made by Codext GmbH in Wolpertshausen, Germany.</p>
+      <div class="actions">
+        <a class="btn accent" href="/ios"><span><small>Download on the</small>App Store</span></a>
+        <a class="btn accent" href="/android"><span><small>Get it on</small>Google Play</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Codext GmbH · MIT license</span>
+    <nav aria-label="Footer"><a href="/en/support/">Help</a><a href="/en/privacy/">Privacy</a><a href="/en/imprint/">Imprint</a><a href="https://github.com/codextde/openblitzer">GitHub</a><a href="/" hreflang="de" lang="de">Deutsch</a></nav>
+    <span class="osm">Camera data: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL). Map tiles: OpenFreeMap. Not available in Switzerland.</span>
+  </footer>
+</div>
+</body>
+</html>

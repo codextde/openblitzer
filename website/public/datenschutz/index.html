@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung – OpenBlitzer</title>
+<meta name="description" content="Datenschutzerklärung für die App OpenBlitzer und die Website openblitzer.codext.de. Kein Konto, keine Werbung, kein Tracking. Was bei Meldungen an unseren Server geht und wie lange es gespeichert wird.">
+<link rel="canonical" href="https://openblitzer.codext.de/datenschutz/">
+<link rel="alternate" hreflang="de" href="https://openblitzer.codext.de/datenschutz/">
+<link rel="alternate" hreflang="en" href="https://openblitzer.codext.de/en/privacy/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30">OpenBlitzer</a>
+    <nav class="nav-links" aria-label="Hauptnavigation"><a href="/support/">Hilfe</a><a href="/datenschutz/" aria-current="page">Datenschutz</a><a href="/impressum/">Impressum</a><a class="lang" href="/en/privacy/" hreflang="en" lang="en">EN</a></nav>
+  </header>
+  <main class="doc">
+    <h1>Datenschutzerklärung</h1>
+    <p class="meta">Für die App „OpenBlitzer“ (iOS und Android), die Schnittstelle api.openblitzer.codext.de und die Website openblitzer.codext.de. Stand: 12. Oktober 2026</p>
+
+    <h2>Kurz gesagt</h2>
+    <p>OpenBlitzer braucht kein Konto, zeigt keine Werbung und enthält keine Analyse-, Tracking- oder Werbe-SDKs. Die Warnungen berechnet die App auf deinem Gerät, dein Standort bleibt dort. An unseren Server in Deutschland gehen nur zwei Dinge: deine ungefähre Position, wenn die App Live-Meldungen abruft (wird nicht gespeichert), und deine Meldungen und Bestätigungen, zusammen mit einer zufälligen, nur als Hash gespeicherten Installations-ID. Meldungen löschen wir spätestens 30 Tage nach ihrem Ablauf.</p>
+
+    <h2>Verantwortlicher</h2>
+    <p>Codext GmbH<br>Frankenstraße 10<br>74549 Wolpertshausen<br>Deutschland<br>E-Mail: <a href="mailto:daniel.ehrhardt@codext.de">daniel.ehrhardt@codext.de</a><br>Telefon: +49 7904 5203106<br>Vertreten durch den Geschäftsführer Daniel Ehrhardt</p>
+
+    <h2>Welche Daten die App verarbeitet</h2>
+
+    <h3>Standort auf deinem Gerät</h3>
+    <p>Mit deiner Erlaubnis nutzt die App den Standort deines Geräts, um deine Position auf der Karte zu zeigen, Geschwindigkeit und Fahrtrichtung zu bestimmen und zu prüfen, ob ein Blitzer oder eine Meldung vor dir liegt. Damit Warnungen auch bei ausgeschaltetem Bildschirm oder mit einer anderen App im Vordergrund funktionieren, läuft das während der Nutzung auch im Hintergrund. Das Betriebssystem zeigt dir das an: auf dem iPhone mit dem Standort-Hinweis in der Statusleiste, auf Android mit einer dauerhaften Benachrichtigung. Die Warnlogik läuft vollständig auf deinem Gerät. Deine Fahrt wird nicht aufgezeichnet, und dein Standort verlässt das Gerät nur in den unten beschriebenen Fällen. Du kannst die Berechtigung jederzeit in den Systemeinstellungen entziehen.</p>
+
+    <h3>Live-Meldungen abrufen</h3>
+    <p>Um Meldungen anderer Nutzer in deiner Umgebung zu laden, sendet die App deine ungefähre aktuelle Position und einen Suchradius an unseren Server (api.openblitzer.codext.de). Der Server verwendet die Position nur, um die passenden Meldungen zurückzugeben, und speichert sie nicht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der von dir genutzten Funktion).</p>
+
+    <h3>Melden und Bestätigen</h3>
+    <p>Wenn du etwas meldest, etwa einen mobilen Blitzer oder ein Stauende, sendet die App an unseren Server:</p>
+    <ul>
+      <li>die Art der Meldung und die Position, an der du sie abgibst;</li>
+      <li>optional deine Fahrtrichtung, deine Geschwindigkeit und ein Tempolimit, wenn du eines angibst;</li>
+      <li>deine Installations-ID (siehe unten).</li>
+    </ul>
+    <p>Wenn du eine Meldung bestätigst oder verneinst („Noch da?“), sendet die App die Kennung der Meldung, deine Stimme (Ja oder Nein) und deine Installations-ID.</p>
+    <p><strong>Installations-ID:</strong> Beim ersten Start erzeugt die App eine zufällige 128-Bit-Zahl und speichert sie auf deinem Gerät. Sie hat keinen Bezug zu deinem Namen, deiner Telefonnummer, deinem Gerät oder einem Konto. Unser Server speichert sie nicht im Klartext, sondern nur als SHA-256-Hash mit einem geheimen Server-Salt. Wir brauchen sie, damit jedes Gerät pro Meldung nur eine Stimme hat, doppelte Meldungen zusammengeführt werden und wir Missbrauch begrenzen können (zum Beispiel höchstens 12 Meldungen pro Stunde und Gerät). Wenn du die App löschst, ist die ID weg; eine Neuinstallation erzeugt eine neue.</p>
+    <p><strong>Sichtbarkeit:</strong> Meldungen sind für alle Nutzer der App und über die offene Schnittstelle sichtbar, und zwar mit Art, Position, Fahrtrichtung, Tempolimit, Zeitpunkten und der Zahl der Ja- und Nein-Stimmen. Die Installations-ID und ihr Hash werden nie veröffentlicht.</p>
+    <p><strong>Speicherdauer:</strong> Jede Meldung hat eine Laufzeit, die mit jeder Bestätigung neu beginnt (zum Beispiel 2,5 Stunden für einen mobilen Blitzer, 72 Stunden für eine Baustelle, 30 Tage für einen neuen festen Blitzer). Meldungen und die zugehörigen Stimmen bewahren wir bis zum Ablauf und danach höchstens 30 Tage auf, um Missbrauch erkennen zu können; danach werden sie gelöscht. Ausnahme: Bestätigen drei verschiedene Geräte einen neuen festen Blitzer, werden Position, Art und Tempolimit dauerhaft Teil der öffentlichen Blitzer-Daten, ohne Installations-ID oder sonstigen Bezug zu den meldenden Geräten.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der Melde-Funktion) und Art. 6 Abs. 1 lit. f DSGVO (unser berechtigtes Interesse an verlässlichen Meldungen und an der Abwehr von Missbrauch).</p>
+
+    <h3>Feste Blitzer-Daten</h3>
+    <p>Die festen Blitzer lädt die App von unserem Server herunter und speichert sie auf deinem Gerät, damit Warnungen auch ohne Netz funktionieren. Diese Anfrage enthält keine Position. Die Daten stammen aus OpenStreetMap (© OpenStreetMap-Mitwirkende, ODbL).</p>
+
+    <h3>Server und IP-Adressen</h3>
+    <p>Unser Server läuft bei der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, in Rechenzentren in Deutschland. Hetzner verarbeitet die Daten in unserem Auftrag nach Art. 28 DSGVO. Bei jeder Verbindung überträgt dein Gerät technisch bedingt seine IP-Adresse. Wir verwenden sie nur kurzzeitig im Arbeitsspeicher, um Anfragen zu begrenzen (zum Beispiel höchstens 40 Meldungen pro Stunde und IP-Adresse), und speichern sie nicht in der Datenbank. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Schutz des Dienstes vor Missbrauch).</p>
+
+    <h3>Kartenkacheln von OpenFreeMap</h3>
+    <p>Die Karte in der App besteht aus Kacheln, die dein Gerät direkt von OpenFreeMap (tiles.openfreemap.org) lädt, betrieben von der Hyperknot Software Kft., Ungarn. Dabei werden technisch bedingt deine IP-Adresse und die angefragten Kacheln übertragen; aus den Kacheln lässt sich der angezeigte Kartenausschnitt ableiten. Nach Angaben von OpenFreeMap werden in den Zugriffsprotokollen keine IP-Adressen gespeichert, keine Cookies verwendet und Protokolle nach 7 Tagen gelöscht; zur Auslieferung kann Cloudflare als Content-Delivery-Netzwerk eingesetzt werden. Einzelheiten stehen in der <a href="https://openfreemap.org/privacy/">Datenschutzerklärung von OpenFreeMap</a>. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anzeige der Karte). Die Kartendaten stammen aus OpenStreetMap (© OpenStreetMap-Mitwirkende).</p>
+
+    <h3>Töne, Sprachansagen und Benachrichtigungen</h3>
+    <p>Signaltöne spielt die App selbst ab. Sprachansagen erzeugt die Sprachausgabe deines Betriebssystems; dafür werden keine Daten an uns übertragen. Während Warnungen im Hintergrund laufen, zeigt Android eine dauerhafte Benachrichtigung an. Die App nutzt keinen Push-Dienst.</p>
+
+    <h3>Einstellungen</h3>
+    <p>Deine Einstellungen, zum Beispiel Sprache, Einheit und die Toleranz für den Tempo-Alarm, liegen nur auf deinem Gerät.</p>
+
+    <h3>App Stores</h3>
+    <p>Die App wird über den Apple App Store und Google Play verteilt. Beim Herunterladen und bei Updates verarbeiten Apple bzw. Google Daten nach ihren eigenen Datenschutzbestimmungen. Von den Stores erhalten wir lediglich zusammengefasste, nicht personenbezogene Statistiken (z. B. Anzahl der Installationen) sowie, falls du der Weitergabe zustimmst, anonyme Absturzberichte.</p>
+
+    <h3>Kontakt per E-Mail</h3>
+    <p>Wenn du uns eine E-Mail schreibst, verarbeiten wir deine E-Mail-Adresse und deine Nachricht, um dir zu antworten (Art. 6 Abs. 1 lit. b und f DSGVO). Wir löschen die Daten, sobald sie nicht mehr erforderlich sind, spätestens nach Ablauf gesetzlicher Aufbewahrungsfristen.</p>
+
+    <h2>Website openblitzer.codext.de</h2>
+    <p>Die Website wird über Cloudflare (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA) ausgeliefert. Beim Aufruf verarbeitet Cloudflare technisch notwendige Daten wie IP-Adresse, Zeitpunkt und aufgerufene Seite, um die Website sicher auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist unter dem EU-US Data Privacy Framework zertifiziert. Die Website verwendet keine Cookies, keine Analyse-Tools und keine eingebundenen Inhalte Dritter; die Schrift wird von unserem eigenen Server geladen.</p>
+
+    <h2>Keine Weitergabe, kein Verkauf</h2>
+    <p>Wir verkaufen keine Daten und geben keine personenbezogenen Daten an Dritte weiter. Außer Hetzner als Hosting-Dienstleister erhält niemand Zugriff auf unseren Server.</p>
+
+    <h2>Deine Rechte</h2>
+    <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an <a href="mailto:daniel.ehrhardt@codext.de">daniel.ehrhardt@codext.de</a>. Weil wir weder Namen noch Konten noch die Installations-ID im Klartext speichern, können wir gespeicherte Meldungen in der Regel keiner Person zuordnen (Art. 11 DSGVO). Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart.</p>
+
+    <h2>Änderungen</h2>
+    <p>Wir passen diese Erklärung an, wenn sich die App oder die Rechtslage ändert. Es gilt die jeweils hier veröffentlichte Fassung.</p>
+  </main>
+  <footer>
+    <span>© 2026 Codext GmbH</span>
+    <nav aria-label="Fußzeile"><a href="/">Start</a><a href="/support/">Hilfe</a><a href="/impressum/">Impressum</a><a href="https://github.com/codextde/openblitzer">GitHub</a><a href="/en/privacy/" hreflang="en" lang="en">English</a></nav>
+  </footer>
+</div>
+</body>
+</html>
