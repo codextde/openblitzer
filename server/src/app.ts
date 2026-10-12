@@ -101,10 +101,11 @@ function parseReport(body: Record<string, unknown>): NewReport {
   };
 }
 
+const IP_HEADER = (process.env.OPENBLITZER_IP_HEADER ?? "x-forwarded-for").toLowerCase();
+
 function clientIp(req: Request, server: Server<unknown> | undefined): string {
-  const forwarded = req.headers.get("cf-connecting-ip") ?? req.headers.get("x-forwarded-for");
-  const first = forwarded?.split(",")[0]?.trim();
-  return first || server?.requestIP(req)?.address || "unknown";
+  const hops = req.headers.get(IP_HEADER)?.split(",").map((s) => s.trim()).filter(Boolean);
+  return hops?.at(-1) || server?.requestIP(req)?.address || "unknown";
 }
 
 function sameSecret(a: string, b: string): boolean {

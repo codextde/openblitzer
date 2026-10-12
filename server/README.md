@@ -39,6 +39,7 @@ Community cameras (`c<id>`) are kept across imports.
 | `OVERPASS_URL` | `https://overpass-api.de/api/interpreter` | Overpass endpoint |
 | `OPENBLITZER_COUNTRIES` | all of Europe | Comma-separated ISO codes to import, e.g. `DE,AT,LU` |
 | `OPENBLITZER_IMPORT` | `1` | Set to `0` to disable automatic imports |
+| `OPENBLITZER_IP_HEADER` | `x-forwarded-for` | Header with the client IP set by your reverse proxy (last entry is used), e.g. `cf-connecting-ip` behind Cloudflare |
 
 ## Self-host
 
