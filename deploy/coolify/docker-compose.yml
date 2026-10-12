@@ -1,0 +1,28 @@
+# Coolify v4, "Docker Compose" build pack. Base directory: /deploy/coolify
+# Required: OPENBLITZER_ADMIN_TOKEN. Optional: OPENBLITZER_SALT (generated into the volume when empty).
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: server/Dockerfile
+    environment:
+      - SERVICE_FQDN_API_8080
+      - PORT=8080
+      - DATA_DIR=/data
+      - OPENBLITZER_ADMIN_TOKEN=${OPENBLITZER_ADMIN_TOKEN:?}
+      - OPENBLITZER_SALT=${OPENBLITZER_SALT:-}
+      - OVERPASS_URL=${OVERPASS_URL:-https://overpass-api.de/api/interpreter}
+    expose:
+      - "8080"
+    volumes:
+      - openblitzer-data:/data
+    healthcheck:
+      test: ["CMD", "bun", "-e", "fetch('http://127.0.0.1:8080/v1/health').then(r => process.exit(r.ok ? 0 : 1), () => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  openblitzer-data:
