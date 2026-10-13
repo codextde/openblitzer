@@ -1,0 +1,119 @@
+{
+  "expo": {
+    "name": "OpenBlitzer",
+    "slug": "openblitzer",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "openblitzer",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "de.codext.openblitzer",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleDevelopmentRegion": "de",
+        "CFBundleLocalizations": [
+          "de",
+          "en"
+        ],
+        "UIBackgroundModes": [
+          "audio"
+        ],
+        "NSLocationWhenInUseUsageDescription": "OpenBlitzer nutzt deinen Standort, um dich vor Blitzern und Gefahren auf deiner Strecke zu warnen, auch wenn die App im Hintergrund läuft. Dein genauer Standort verlässt das Telefon nur, wenn du etwas meldest.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "OpenBlitzer nutzt deinen Standort, um dich während einer laufenden Warnung vor Blitzern und Gefahren zu warnen, auch wenn du die App verlässt.",
+        "NSLocationAlwaysUsageDescription": "OpenBlitzer nutzt deinen Standort, um dich während einer laufenden Warnung vor Blitzern und Gefahren zu warnen, auch wenn du die App verlässt."
+      }
+    },
+    "android": {
+      "package": "de.codext.openblitzer",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0D10",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": true,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.ACTIVITY_RECOGNITION"
+      ]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "./plugins/with-single-location-permission.js",
+      "./plugins/with-local-notifications-only.js",
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F5F6F8",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 96,
+          "dark": {
+            "backgroundColor": "#0B0D10",
+            "image": "./assets/images/splash-icon.png"
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "OpenBlitzer nutzt deinen Standort, um dich vor Blitzern und Gefahren auf deiner Strecke zu warnen, auch wenn die App im Hintergrund läuft. Dein genauer Standort verlässt das Telefon nur, wenn du etwas meldest.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": false,
+          "isAndroidForegroundServiceEnabled": true,
+          "androidForegroundServiceIcon": "./assets/images/notification-icon.png"
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#FFB800"
+        }
+      ],
+      "@maplibre/maplibre-react-native",
+      "expo-sqlite",
+      "expo-web-browser",
+      "expo-localization",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      "./plugins/with-scene-lifecycle.js"
+    ],
+    "experiments": {
+      "reactCompiler": true,
+      "typedRoutes": false
+    }
+  }
+}
