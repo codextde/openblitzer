@@ -7,10 +7,17 @@ no tracking.
 
 Made by [Codext GmbH](https://codext.de). Website: [openblitzer.codext.de](https://openblitzer.codext.de)
 
+<p>
+  <img src="app/screenshots/iphone-6.9/en/01-drive-warning.png" width="200" alt="Drive screen with a speed camera warning">
+  <img src="app/screenshots/iphone-6.9/en/03-report.png" width="200" alt="Report sheet">
+  <img src="app/screenshots/iphone-6.9/en/04-confirm.png" width="200" alt="Reports nearby">
+  <img src="app/screenshots/iphone-6.9/en/05-hud.png" width="200" alt="HUD mode">
+</p>
+
 ## Apps
 
 - iOS: App Store (in review)
-- Android: Google Play (in review), APKs on the [releases page](https://github.com/codextde/openblitzer/releases)
+- Android: Google Play (in review), APK on the [releases page](https://github.com/codextde/openblitzer/releases)
 
 ## Features
 

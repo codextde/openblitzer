@@ -13,7 +13,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ensureFixed } from '@/data/fixed';
 import { POLL_MS, refreshReports } from '@/data/reports';
 import { useT } from '@/i18n';
-import { SCREENSHOT_MODE } from '@/lib/demo-mode';
+import { SCREENSHOT_MODE, useShotCommands } from '@/lib/demo-mode';
 import { iconFonts, textFonts } from '@/lib/fonts';
 import { useLive } from '@/store/live';
 import { useSettings } from '@/store/settings';
@@ -142,6 +142,7 @@ export default function RootLayout() {
   }, []);
 
   const ready = ((loaded || !!error) && hydrated) || timedOut;
+  useShotCommands(ready);
 
   useEffect(() => {
     if (ready) SplashScreen.hideAsync().catch(() => {});

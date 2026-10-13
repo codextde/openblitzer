@@ -80,7 +80,7 @@ export const de = {
     hud: 'HUD-Modus',
     loadingData: 'Kamera-Daten werden geladen',
     noData: 'Keine Kamera-Daten. Prüfe deine Verbindung.',
-    cameras: '{n} Blitzer offline',
+    cameras: '{n} Blitzer gespeichert',
     noLocation: 'Warte auf GPS …',
     locationDenied: 'Standort ist nicht freigegeben',
     openSettings: 'Einstellungen öffnen',

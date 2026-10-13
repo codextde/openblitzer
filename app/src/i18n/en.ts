@@ -82,7 +82,7 @@ export const en: Dict = {
     hud: 'HUD mode',
     loadingData: 'Loading camera data',
     noData: 'No camera data. Check your connection.',
-    cameras: '{n} cameras offline',
+    cameras: '{n} cameras on device',
     noLocation: 'Waiting for GPS …',
     locationDenied: 'Location access is off',
     openSettings: 'Open settings',
