@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "bundleIdentifier": "de.codext.openblitzer",
-      "buildNumber": "1",
+      "buildNumber": "2",
       "supportsTablet": false,
       "config": {
         "usesNonExemptEncryption": false

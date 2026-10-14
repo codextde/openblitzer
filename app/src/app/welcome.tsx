@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Image, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Animated, { FadeInRight, FadeOutLeft } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -8,7 +8,7 @@ import type { IconName } from '@/components/icon-names';
 import { Button, success } from '@/components/ui';
 import { useT } from '@/i18n';
 import { useSettings } from '@/store/settings';
-import { fonts, space, type, useColors } from '@/theme';
+import { space, type, useColors } from '@/theme';
 import { requestNotificationPermission } from '@/warn/output';
 import { ensureLocationPermission } from '@/warn/session';
 
@@ -38,13 +38,11 @@ export default function WelcomeScreen() {
   const [step, setStep] = useState(0);
   const [busy, setBusy] = useState(false);
 
-  const finish = async (ask: boolean) => {
-    if (ask) {
-      setBusy(true);
-      await ensureLocationPermission(true);
-      await requestNotificationPermission();
-      setBusy(false);
-    }
+  const finish = async () => {
+    setBusy(true);
+    await ensureLocationPermission(true);
+    await requestNotificationPermission();
+    setBusy(false);
     success();
     useSettings.getState().set({ onboarded: true, legalAccepted: true });
   };
@@ -123,10 +121,7 @@ export default function WelcomeScreen() {
             ]}
           />
           <View style={{ flex: 1 }} />
-          <Button title={t('welcome.allow')} large loading={busy} onPress={() => finish(true)} />
-          <Pressable onPress={() => finish(false)} accessibilityRole="button" style={styles.later} hitSlop={8}>
-            <Text style={[type.bodyStrong, { color: c.textSecondary, fontFamily: fonts.semibold }]}>{t('welcome.later')}</Text>
-          </Pressable>
+          <Button title={t('common.continue')} large loading={busy} onPress={finish} />
         </Animated.View>
       ) : null}
     </ScrollView>
@@ -143,5 +138,4 @@ const styles = StyleSheet.create({
   badge: { width: 72, height: 72, borderRadius: 22, alignItems: 'center', justifyContent: 'center' },
   point: { flexDirection: 'row', alignItems: 'center', gap: space.md },
   pointIcon: { width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
-  later: { alignSelf: 'center', paddingVertical: space.sm, paddingHorizontal: space.lg, minHeight: 44, justifyContent: 'center' },
 });
