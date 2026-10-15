@@ -17,7 +17,7 @@ Made by [Codext GmbH](https://codext.de). Website: [openblitzer.codext.de](https
 ## Apps
 
 - iOS: App Store (in review)
-- Android: Google Play (in review), APK on the [releases page](https://github.com/codextde/openblitzer/releases)
+- Android: [Google Play](https://play.google.com/store/apps/details?id=de.codext.openblitzer), APK on the [releases page](https://github.com/codextde/openblitzer/releases)
 
 ## Features
 
